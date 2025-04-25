@@ -1,0 +1,47 @@
+.content {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    max-width: 620px;
+    padding: 20px;
+}
+.title {
+    padding: 20px
+}
+.title h1 {
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    text-align: center;
+}
+.title h2 {
+    color: #006eb6;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    text-align: center;
+    border-bottom: solid 0.5px #006eb6;
+}
+main {
+    justify-content: left;
+    line-height: 1.5em;
+    max-width: 600px;
+    padding: 20px;
+    
+}
+.logo {
+    width: 150px;
+}
+.does-list li {
+    padding: 10px 0;
+}
+footer {
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 620px;
+    padding: 20px;
+}
