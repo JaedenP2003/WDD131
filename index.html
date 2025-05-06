@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD131 Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="home.js" defer></script>
 </head>
 <body>
-    <a href="mission/index.html">Mission Statement</a>
+    <div id="content">
+        <header>
+            <h1>WDD131 Main Portal</h1>
+            <nav class="navbar" id="myNavBar">
+                <a href="https://jaedenp2003.github.io/WDD130/index.html">WDD130 Page</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="mission/index.html">Mission Statement</a>
+                <a href="#">Cool Pics</a>
+                <a href="#">Build a Blog</a>
+                <a href="#">Credit Card Form</a>
+                <a href="#">Character Card</a>
+                <a href="#">Recipe Book</a>
+                <a href="#">Personal Site Plan</a>
+                <a href="#">Personal Site</a>
+                <a href="javascript:void(0);" class="icon" addEventListener="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+            <p>Jaeden Platt - WDD131</p>
+        </header>
+        <main>
+            <section class="info">
+                <h2>Welcome to my page!</h2>
+                <p>My name is Jaeden Platt, and I am a sophomore at BYU-Idaho! I am married to my wife, Liz, and enjoy many hobbies.</p>
+                <p>Some of my hobbies are video games, Legos, and baking! My favorite video game series is The Legend of Zelda!</p>
+                <p>This page/portal is a collection of all my main pages created in Dynamic Web Fundamentals.</p>
+            </section>
+            <section class="image-gallery">
+                <h2>Image Gallery</h2>
+                <img src="images/JaedenandLiz.jpg" alt="Liz and Me" class="self-portrait">
+                <h3>My Wife and I</h3>
+                <h3>Favorite Zelda Picture</h3>
+                <img src="images/zelda_image.jpg" alt="Favorite Zelda Picture" class="zelda-image">
+                <img src="images/tp.jpg" alt="Favorite Zelda Game" class="tp-image">
+                <h3>Favorite Zelda Game</h3>
+            </section>
+        </main>
+        <footer>
+            <p class="copy">&copy; Jaeden Platt 2025</p>
+            <p class="label">WDD131 Web Projects</p>
+        </footer>
+    </div>
 </body>
 </html>
