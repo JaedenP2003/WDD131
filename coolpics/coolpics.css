@@ -32,14 +32,31 @@ header .navbar {
     flex-direction: column;
     text-align: center;
     padding: 10px;
+    position: relative;
 }
 header .navbar a {
     color: var(--text-light);
     padding: 10px;
 }
-.button {
+.menu {
     text-decoration: none;
     font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.toggleMenu {
+    display: none;
+    cursor: pointer;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+.hide {
+    display: none;
 }
 main h2 {
     text-align: center;
@@ -52,18 +69,64 @@ main h2 {
     justify-content: center;
     margin: 20px;
 }
-.gallery img {
+.gallery-img {
     width: 250px;
     height: 250px;
     object-fit: cover;
     border: white 10px solid;
     box-shadow: 0 4px 8px black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.gallery-img:hover {
+    opacity: 0.6;
 }
 footer {
     background-color: var(--primary-color);
     color: var(--text-light);
     font-size: 1.2em;
     margin-bottom: 0;
+}
+#imgModal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+#imgModal::backdrop {
+  background: rgba(0, 0, 0, .2);
+}
+
+dialog .modal-img {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border: 10px solid white;
+  border-radius: 10px;
+}
+.close-modal {
+  position: absolute;
+  top: 70px;
+  right: 45px;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close-modal:hover,
+.close-modal:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 @media screen and (min-width: 700px) {
     .gallery {
@@ -83,14 +146,14 @@ footer {
     .gallery img {
         justify-self: center;
     }
-    header .navbar {
+    header .navbar .nav-list {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 40px;
     }
-    .button {
+    .menu {
         display: none;
     }
 }
