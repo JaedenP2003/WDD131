@@ -110,10 +110,6 @@ main {
     color: white;
 }
 
-.navbar .icon {
-    display: none;
-}
-
 footer {
     background-color: #a5cea5;
     display: grid;
@@ -140,25 +136,23 @@ footer .label {
     padding: 10px;
 }
 
-
-@media screen and (max-width: 600px) {
-    .navbar a:not(:first-child) {display: none;}
-    .navbar a.icon{
-        float: right;
-        display: block;
-    }
+.extra-links {
+    display: none;
 }
 
-@media screen and (max-width: 600px) {
-    .navbar.responsive {position: relative;}
-    .navbar.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
+.show {
+    display: block;
+    float: left;
+}
+
+.hamburger {
+    font-size: 17px;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #a5cea5;
+    color: #424242;
+}
+.hamburger:hover {
+    background-color: #c6dec6;
+    color: #424242;
 }
