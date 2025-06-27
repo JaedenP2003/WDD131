@@ -279,3 +279,94 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+//Function to generate a random number >= 0 and < num
+function getRandomInt(num) {
+  return Math.floor(Math.random() * num);
+}
+
+//Function to return a random recipe
+function getRandomRecipe() {
+  return recipes[getRandomInt(recipes.length)];
+}
+
+//Template function to generate the tags markup
+function generateTagsMarkup(tags) {
+  return tags.map(tag => `<div class="tag">${tag}</div>`).join('');
+}
+
+//Template function to generate the star rating markup
+function generateRatingStars(rating) {
+  const fullStars = Math.floor(rating);
+  const halfStar = rating % 1 >= 0.5;
+  const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+  let starsMarkup = '';
+  starsMarkup += '⭐'.repeat(fullStars);
+  if (halfStar) starsMarkup += '⭐'; // Optionally: add a different half-star icon
+  starsMarkup += '☆'.repeat(emptyStars);
+
+  return `<div class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">
+    <span aria-hidden="true">${starsMarkup}</span>
+  </div>`;
+}
+
+//Template function to generate the full recipe card
+function generateRecipeHTML(recipe) {
+  return `
+    <div class="recipe-card">
+      <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image">
+      <div class="recipe-content">
+        ${generateTagsMarkup(recipe.tags)}
+        <h2 class="recipe-title">${recipe.name}</h2>
+        ${generateRatingStars(recipe.rating)}
+        <p class="description">${recipe.description}</p>
+      </div>
+    </div>
+  `;
+}
+
+//Init function to render a random recipe
+function init() {
+  const contentDiv = document.querySelector('.content');
+  const randomRecipe = getRandomRecipe();
+  contentDiv.innerHTML = generateRecipeHTML(randomRecipe);
+}
+
+//Wait for the DOM to load before running init
+window.addEventListener('DOMContentLoaded', () => {
+  init();
+
+  const searchButton = document.getElementById('search-button');
+  const searchInput = document.getElementById('search');
+
+  searchButton.addEventListener('click', () => {
+    const query = searchInput.value.toLowerCase();
+    const filtered = filterRecipes(query);
+    renderRecipeList(filtered);
+  });
+});
+
+//Filter recipes based on query
+function filterRecipes(query) {
+  return recipes
+    .filter(recipe => {
+      const name = recipe.name.toLowerCase();
+      const description = recipe.description.toLowerCase();
+      const tags = recipe.tags.map(tag => tag.toLowerCase()).join(' ');
+      const ingredients = recipe.recipeIngredient.join(' ').toLowerCase();
+      return (
+        name.includes(query) ||
+        description.includes(query) ||
+        tags.includes(query) ||
+        ingredients.includes(query)
+      );
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+//Render list of recipes
+function renderRecipeList(recipeList) {
+  const contentDiv = document.querySelector('.content');
+  contentDiv.innerHTML = recipeList.map(recipe => generateRecipeHTML(recipe)).join('');
+}
