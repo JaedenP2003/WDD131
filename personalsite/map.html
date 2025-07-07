@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZeldaInformer</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="script.js" defer></script>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -20,47 +21,10 @@
             </nav>
             <button id="theme-toggle">Toggle Theme</button>
         </header>
-
         <main>
-            <div id="hero">
-                <section id="hero-box">
-                    <img id="hero-image" src="images/25th-ann.png" alt="Zelda Informer Hero Image">
-                </section>
-                <section id="hero-msg">
-                    <h1 class="home-title">Welcome to ZeldaInformer!</h1>
-                    <p>Explore the world of The Legend of Zelda with us!</p>
-                </section>
+            <div id="map">
+                <img src="images/twilight_princess_map.png" alt="Twilight Princess Map">
             </div>
-            <section class="gear">
-            <h2>Gear Filter</h2>
-            <div id="filter-buttons">
-                <button data-type="All">All</button>
-                <button data-type="Weapon">Weapons</button>
-                <button data-type="Armor">Armor</button>
-                <button data-type="Shield">Shield</button>
-                <button data-type="Items">Items</button>
-            </div>
-            <div class="carousel-container">
-                <button id="gear-prev-btn">←</button>
-                <div id="gear-container" class="carousel-track"></div>
-                <button id="gear-next-btn">→</button>
-            </div>
-            </section>
-
-            <section class="characters">
-            <h2>Characters</h2>
-            <div id="filter-buttons-char">
-                <button data-type="All">All</button>
-                <button data-type="Hylian">Hylian</button>
-                <button data-type="Twili">Twili</button>
-                <button data-type="Sword Spirit">Sword Spirit</button>
-            </div>
-            <div class="carousel-container">
-                <button id="char-prev-btn">←</button>
-                <div id="character-container" class="carousel-track"></div>
-                <button id="char-next-btn">→</button>
-            </div>
-            </section>
         </main>
         <footer>
             <h2>&copy; Jaeden Platt 2025</h2>
@@ -88,6 +52,5 @@
             </div>
         </div>
   </div>
-  <script type="module" src="script.js" defer></script>
 </body>
 </html>
