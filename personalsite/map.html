@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZeldaInformer</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script type="module" src="script.js" defer></script>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="ZeldaInformer">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A simple fan-made website dedicated to The Legend of Zelda series. Explore characters, gear, and the world of Hyrule!">
+    <meta property="og:image" content="images/25th-ann.webp">
+    <meta property="og:url" content="https://jaedenp2003.github.io/WDD131/index.html">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
     <div id="content">
         <header>
             <a href="https://jaedenp2003.github.io/WDD131/index.html" id="logo-link">
-            <img id="logo" src="images/New_Zelda_Informer_Logo.png" alt="Zelda Informer Logo" style="width: 100px;">
+            <img id="logo" src="images/New_Zelda_Informer_Logo.webp" alt="Zelda Informer Logo" style="width: 100px;">
             </a>
             <h1>Zelda Informer</h1>
             <nav class="navbar">
@@ -22,8 +27,35 @@
             <button id="theme-toggle">Toggle Theme</button>
         </header>
         <main>
-            <div id="map">
-                <img src="images/twilight_princess_map.png" alt="Twilight Princess Map">
+            <div id="tp-map">
+                <div class="map">
+                    <h1>Map of Twilight Princess</h1>
+                    <img src="images/twilight_princess_map.webp" alt="Twilight Princess Map">
+                </div>
+                <section id="one">
+                    <h2>Section 1: Ordona Province</h2>
+                    <p>This province is home to the people of Ordon Village, the place where Link grew up. It is a small and simple province watched over by the light spirit Ordona.</p>
+                </section>
+                <section id="two">
+                    <h2>Section 2: Faron Woods</h2>
+                    <p>Faron Woods is full of lush greenery and is home to a group of monkeys. Some landmarks to note are the Forest Temple and the Sacred Grove, home to the Temple of Time.</p>
+                </section>
+                <section id="three">
+                    <h2>Section 3: Eldin Province</h2>
+                    <p>Eldin Province is home to the people of Kakariko Village and a special race of creatures known as the Goron. They make their home on Death Mountain and take care of the mines found there. Some other landmarks are the Bridge of Eldin, the Hidden Village, and Hyrule Field.</p>
+                </section>
+                <section id="four">
+                    <h2>Section 4: Lanayru Province</h2>
+                    <p>Lanayru Province is known for being home to Hyrule Castle and the Hyrule Castle Town, a bustling area full of shops and stores. It is also home to the Zora people who make their abode in Zora's Domain. Some other landmarks are Zora's River, the Fishing Hole, and Lake Hylia where the Lakebed Temple sleeps.</p>
+                </section>
+                <section id="five">
+                    <h2>Section 5: Gerudo Desert</h2>
+                    <p>The Gerudo Desert is a vast and arid region located west of Hyrule. While there are no inhabitants there, it is home to the prison grounds known as Arbiter's Grounds, a place where dangerous thieves were sent.</p>
+                </section>
+                <section id="six">
+                    <h2>Section 6: Snowpeak</h2>
+                    <p>Snowpeak is a snowy mountain region located in the northern part of Hyrule. It is a very empty place other than a secluded mansion where two yetis have made their home.</p>
+                </section>
             </div>
         </main>
         <footer>
@@ -41,16 +73,7 @@
                 </a>
             </div>
         </footer>
-
-        <!-- Modal -->
-        <div id="modal" class="modal hidden">
-            <div class="modal-content">
-            <span class="close">&times;</span>
-            <img id="modal-image" src="" alt="Character Image">
-            <h2 id="modal-title"></h2>
-            <p id="modal-desc"></p>
-            </div>
-        </div>
   </div>
+  <script type="module" src="map.js" defer></script>
 </body>
 </html>

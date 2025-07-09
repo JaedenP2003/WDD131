@@ -4,7 +4,7 @@ export const gearItems = [
     type: "Weapon",
     game: "Breath of the Wild",
     location: "Sacred Grove",
-    image: "images/mastersword.png",
+    image: "images/mastersword.webp",
     description: "The legendary sword that seals the darkness, weilded only by the chosen hero of the Goddess."
   },
   {
@@ -12,7 +12,7 @@ export const gearItems = [
     type: "Shield",
     game: "Twilight Princess",
     location: "Kakariko Village",
-    image: "images/hylianshield.png",
+    image: "images/hylianshield.webp",
     description: "A sturdy shield made for withstanding devastating attacks."
   },
   {
@@ -20,7 +20,7 @@ export const gearItems = [
     type: "Armor",
     game: "Twilight Princess",
     location: "Lakebed Temple",
-    image: "images/zoraarmor.png",
+    image: "images/zoraarmor.webp",
     description: "Special armor crafted by the Zora, allowing for swimming at great depths with no fear of drowning."
   },
   {
@@ -28,7 +28,7 @@ export const gearItems = [
     type: "Items",
     game: "Twilight Princess",
     location: "Kakariko Village",
-    image: "images/bomb.png",
+    image: "images/bomb.webp",
     description: "Special explosives created by Barnes. They can do some serious damage to anything they are thrown at."
   },
   {
@@ -36,7 +36,7 @@ export const gearItems = [
     type: "Items",
     game: "Twilight Princess",
     location: "Goron Mines",
-    image: "images/bow.png",
+    image: "images/bow.webp",
     description: "A long range weapon used by the previous hero. It can shoot arrows great distances."
   },
   {
@@ -44,7 +44,7 @@ export const gearItems = [
     type: "Armor",
     game: "Twilight Princess",
     location: "Faron Woods",
-    image: "images/green_tunic.png",
+    image: "images/green_tunic.webp",
     description: "The traditional green tunic worn by the hero of legend, handed down by a light spirit."
   },
   {
@@ -52,7 +52,7 @@ export const gearItems = [
     type: "Armor",
     game: "Twilight Princess",
     location: "Castle Town",
-    image: "images/magic_armor.png",
+    image: "images/magic_armor.webp",
     description: "A special armor that grants the wearer temporary invincibility at the cost of rupees. Once rupees run out, it becomes heavy and useless."
   },
   {
@@ -60,7 +60,7 @@ export const gearItems = [
     type: "Shield",
     game: "Twilight Princess",
     location: "Ordon Village",
-    image: "images/ordon_shield.png",
+    image: "images/ordon_shield.webp",
     description: "A shield made by the Ordon villagers. It is light and sturdy."
   },
   {
@@ -68,7 +68,7 @@ export const gearItems = [
     type: "Weapon",
     game: "Twilight Princess",
     location: "Ordon Village",
-    image: "images/ordon_sword.png",
+    image: "images/ordon_sword.webp",
     description: "A sword crafted by Rusl. It was meant as a gift for Princess Zelda."
   },
   {
@@ -76,7 +76,7 @@ export const gearItems = [
     type: "Weapon",
     game: "Twilight Princess",
     location: "Sacred Grove",
-    image: "images/tpmastersword.png",
+    image: "images/tpmastersword.webp",
     description: "A legendary sword left behind by the previous hero. It chooses Link as its master and he is able to recover from the wolf transformation."
   },
   {
@@ -84,7 +84,7 @@ export const gearItems = [
     type: "Weapon",
     game: "Twilight Princess",
     location: "Ordon Village",
-    image: "images/wooden_sword.png",
+    image: "images/wooden_sword.webp",
     description: "A simple wooden sword Link uses for practice. It is not very strong."
   }
 ];
