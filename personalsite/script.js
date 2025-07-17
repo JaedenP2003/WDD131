@@ -5,13 +5,25 @@ let gearIndex = 0;
 let charIndex = 0;
 let currentGearFilter = "All";
 let currentCharFilter = "All";
-const itemsPerPage = 5;
+let itemsPerPage = 5;
 
 import { characters } from './characters.js';
 import { gearItems } from './gear.js';
 
 export function renderGearCarousel(type = "All") {
   gearContainer.innerHTML = '';
+
+const width = window.innerWidth;
+if (width < 1000) {
+  itemsPerPage = 1;
+} 
+else if (width < 1425) {
+  itemsPerPage = 3;
+} 
+else {
+  itemsPerPage = 5;
+}
+
   const filtered = type === "All"
     ? gearItems
     : gearItems.filter(item => item.type === type);
@@ -37,6 +49,18 @@ export function renderGearCarousel(type = "All") {
 
 export function renderCharCarousel(type = "All") {
   charContainer.innerHTML = '';
+
+const width = window.innerWidth;
+if (width < 1000) {
+  itemsPerPage = 1;
+} 
+else if (width < 1425) {
+  itemsPerPage = 3;
+} 
+else {
+  itemsPerPage = 5;
+}
+
   const filtered = type === "All"
     ? characters
     : characters.filter(char => char.type === type);
@@ -96,6 +120,11 @@ document.getElementById('char-next-btn').addEventListener('click', () => {
 
 renderGearCarousel();
 renderCharCarousel();
+
+window.addEventListener('resize', () => {
+  renderGearCarousel("All");
+  renderCharCarousel("All");
+});
 
 
 
