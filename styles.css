@@ -186,6 +186,10 @@ footer .label {
     .image-gallery {
         grid-template-columns: 1fr 1fr;
     }
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
