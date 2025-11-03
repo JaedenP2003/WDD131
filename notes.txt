@@ -1,3 +1,64 @@
+Old Portal Page:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Welcome to Jaeden Platt's WDD131 Main Portal page. This is meant to be a portfolio of all my projects that I have worked on.">
+    <title>WDD131 | Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="home.js" defer></script>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <h1>WDD131 Main Portal</h1>
+            <nav class="navbar" id="myNavBar">
+                <a href="https://jaedenp2003.github.io/WDD130/index.html">WDD130 Page</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="mission/index.html">Mission Statement</a>
+                <a href="coolpics/index.html">Coolpics</a>
+                <div class="extra-links" id="extraLinks">
+                    <a href="blog/index.html">Build a Blog</a>
+                    <a href="ccform/index.html">Credit Card Form</a>
+                    <a href="charcard/index.html">Character Card</a>
+                    <a href="recipebook/index.html">Recipe Book</a>
+                    <a href="personalsite/site-plan.html">Personal Site Plan</a>
+                    <a href="personalsite/index.html">Personal Site</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" id="navToggle">
+                    <span class="hamburger">&#9776;</span>
+                </a>
+            </nav>
+
+            <p>Jaeden Platt - WDD131</p>
+        </header>
+        <main>
+            <section class="info">
+                <h2>Welcome to my page!</h2>
+                <p>My name is Jaeden Platt, and I am a sophomore at BYU-Idaho! I am married to my wife, Liz, and enjoy many hobbies.</p>
+                <p>Some of my hobbies are video games, Legos, and baking! My favorite video game series is The Legend of Zelda!</p>
+                <p>This page/portal is a collection of all my main pages created in Dynamic Web Fundamentals.</p>
+            </section>
+            <section class="image-gallery">
+                <h2>Image Gallery</h2>
+                <img src="images/JaedenandLiz.jpg" alt="Liz and Me" class="self-portrait">
+                <h3>My Wife and I</h3>
+                <h3>Favorite Zelda Picture</h3>
+                <img src="images/zelda_image.jpg" alt="Favorite Zelda Picture" class="zelda-image">
+                <img src="images/tp.jpg" alt="Favorite Zelda Game" class="tp-image">
+                <h3>Favorite Zelda Game</h3>
+            </section>
+        </main>
+        <footer>
+            <p class="copy">&copy; Jaeden Platt 2025</p>
+            <p class="label">WDD131 Web Projects</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+Old Styles:
 @font-face {
     font-family: 'HyliaSerifBeta';
     src: url(fonts/HyliaSerifBeta-Regular.otf);
@@ -7,292 +68,198 @@
     src: url(fonts/The-wild-breath-of-zelda.otf);
 }
 
-:root {
-  --bg-color: #275624;
-  --text-color: #cfc926;
-  --secondary-color: #253125;
-  --main-font: 'HyliaSerifBeta', sans-serif, Helvetica;
-  --secondary-font: 'WildBreathOfZelda', sans-serif, Helvetica;
-}
-
-/* Home Page Styles */
-
 #content {
-    margin: 0;
+    margin: 0 auto;
     max-width: 1600px;
-}
-
-header {
-    display: grid;
-    grid-template-columns: 150px 1fr 2fr 1fr;
-    align-items: center;
-    justify-items: center;
-    gap: 25px;
-    background-color: var(--bg-color);
-    text-shadow: black 2px 2px 2px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    gap: 35px;
-}
-
-nav a {
-    text-decoration: none;
-    padding: 35px;
-    font-size: 2.5em;
-    color: var(--text-color);
-}
-
-nav a:hover {
-    color: black;
-}
-
-
-body.dark-mode {
-  --bg-color: #1e1e1e;
-  --text-color: #ffffff;
-}
-
-body {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  font-family: var(--main-font);
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-#hero {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    margin-top: -100px;
-    text-shadow: black 2px 2px 2px;
-}
-
-#hero-box {
-    grid-column: 1/4;
-    grid-row: 1/2;
-    z-index: -1;
     width: 100%;
-    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #cfe1cc;
+    font-family: WildBreathOfZelda, Arial, sans-serif;
+    color: #424242;
 }
 
-#hero-image {
+main {
+    display: block;
+    margin: 0 auto;
+    gap: 10px;
+    max-width: 1600px;
     width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    place-items: center;
 }
 
-#hero-msg {
-    background-color: rgba(0, 0, 0, 0.4);
-    color: var(--text-color);
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.info h2 {
+    font-family: HyliaSerifBeta, Arial, sans-serif;
+    font-size: 2em;
+    color: #424242;
     text-align: center;
     grid-column: 1/4;
     grid-row: 1/2;
-    margin-top: 100px;
-    font-size: 2em;
-    padding: 50px;
 }
 
-#hero-msg.dark-mode {
-    background-color: rgba(255, 255, 255, 0.1);
+.info p {
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1.25em;
+    background-color: #a5cea5;
+    color: #424242;
+    border-radius: 7px;
+    text-align: center;
+    align-items: center;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    text-align: center;
+    align-items: center;
+}
+.image-gallery h2 {
+    font-family: HyliaSerifBeta, Arial, sans-serif;
+    font-size: 2em;
+    color: #424242;
+    text-align: center;
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.image-gallery h3 {
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1.25em;
+    background-color: #a5cea5;
+    color: #424242;
+    border-radius: 7px;
+    text-align: center;
+    align-items: center;
+}
+.image-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px #424242;
+}
+.navbar {
+    background-color: #a5cea5;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #424242;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #c6dec6;
+    color: #424242;
+}
+
+.navbar a.active {
+    background-color: #424242;
     color: white;
 }
 
-button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  box-shadow: 5px 5px darkgray;
-  cursor: pointer;
-}
-
-.gear {
-  margin-left: 1rem;
-  margin-bottom: 2rem;
-}
-
-.characters {
-  margin-left: 1rem;
-  margin-bottom: 2rem;
-}
-
-#gear-container, #character-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-body.dark-mode .gear-card, body.dark-mode .character-card {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    border: 1px solid #444;
-}
-
-.gear-card, .character-card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  background-color: rgb(193, 193, 193);
-  color: #222222;
-  width: 200px;
-  flex: 0 0 auto;
-  text-align: center;
-  align-content: center;
-  transition: background-color 0.3s;
-  border-radius: 5px;
-  box-shadow: 5px 5px darkgrey;
-}
-
-.carousel-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 1rem;
-  overflow: hidden;
-}
-
-#character-container img, #gear-container img {
-  height: 150px;
-}
-
-.modal {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal.hidden { display: none; }
-
-.modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  position: relative;
-  justify-items: center;
-}
-
-.modal-content img {
-  height: 350px;
-  display: flex;
-  justify-self: center;
-}
-
-.close {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-body.dark-mode .modal-content {
-  background: #1e1e1e;
-  color: #ffffff;
-}
-
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  background-color: var(--bg-color);
-  padding: 2rem;
+    background-color: #a5cea5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
 }
 
-footer a {
-  text-decoration: none;
-  font-size: 1.5em;
-  color: var(--text-color);
+footer .copy {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 1.25em;
+    color: #424242;
+    padding: 10px;
 }
 
-.social-links {
-  display: flex;
-  gap: 1rem;
-  text-decoration: none;
+footer .label {
+    grid-column: 3/5;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 1.25em;
+    color: #424242;
+    padding: 10px;
 }
 
-.icon {
-  width: 50px;
+.extra-links {
+    display: none;
 }
 
-/* Map Styles */
-
-.map {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  grid-column: 2/3;
-  grid-row: 1/2;
+.show {
+    display: block;
+    float: left;
 }
 
-.map img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+.hamburger {
+    font-size: 17px;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #a5cea5;
+    color: #424242;
+}
+.hamburger:hover {
+    background-color: #c6dec6;
+    color: #424242;
 }
 
-main h1 {
-  text-align: center;
+@media (max-width: 768px) {
+    #content, main {
+        padding: 10px;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .show {
+        display: block;
+        float: none;
+        text-align: left;
+    }
+    .info {
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+    }
+    .info p {
+        grid-column: 1/4;
+        margin: 0;
+    }
+    .image-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+    }
 }
 
-#tp-map {
-  display: grid;
-  grid-template-columns: 1fr 500px 1fr;
-  padding: 10px;
-  gap: 10px;
-}
-
-#tp-map section {
-  background-color: var(--bg-color);
-  border-radius: 10px;
-  padding: 15px;
-}
-
-#one {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
-#two {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
-#three {
-  grid-column: 3/4;
-  grid-row: 2/3;
-}
-
-#four {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-
-#five {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-
-#six {
-  grid-column: 3/4;
-  grid-row: 3/4;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  #gear-container, #character-container {
-    flex-direction: column;
-    align-items: center;
-  }
+@media (min-width: 769px) and (max-width: 1024px) {
+    #navbar a {
+        float: none;
+        display: block;
+    }
+    .show {
+        display: block;
+        float: none;
+    }
 }
